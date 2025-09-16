@@ -1,0 +1,20 @@
+<key note>
+
+normal: alt +n
+split: alt +m (m = merge)
+merge by distance: m, then b
+extrude: e
+full screen: .
+isolation: /
+knife: k + a(angular) + num(ex, 15)
+hide: h
+unhide: alt + h
+vertex bevel: ctrl + shift + B
+bevel: ctrl + B
+scale: s
+grab(move): g
+rotate: r (r, then r = relative rotation)
+snap mode: shift + tab
+...
+
+----------------
