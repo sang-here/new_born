@@ -18,3 +18,178 @@ snap mode: shift + tab
 ...
 
 ----------------
+<<카카오 프렌즈 라이언을 스켈렉탈 메쉬로 만들기>>
+
+(몸 따로, 머리 따로 만들고 완성)
+(캐릭터 모델링시 사진의 포즈까지 따라할 필요가 없음. 어쩌피 rig을 넣으려면, A포즈로 만드는 것이 낫음)
+
+today's workflow = 사이즈 설정 - apply - rough modeling - detail modeling (+UV editing)
+
+----
+
+plane 추가, ctrl +r (사각형이니), then set mirror in modifier
+
+<몸 머리 등 작업분, 분리하기>
+instead of alt + m, you can use press 'V(rip resion)' on the edge.
+gg = 연결된 것 범위 안에서만 이동.
+
+knifing은 겹친 면에서 오류가 생길 수 있음 -> 불필요한 면 h(edit mode에서만 숨겨짐)
+(shift +h = 비선택 사항 hide)
+
+---
+
+<subdivision> = 두 엣지들의 중간들에서 부터 끊어내서 부드럽게 연결해줌 = 두 엣지 사이가 좁아 질 수록 각져짐
+
+solidify에서 offset이 0이면 양면에 적용
+ctrl + 3,4,5, ... = subdivision in modifier
+
+p - by loose parts 하면 knifing된 부분은 seperate됨
+
+<detailing>
+k (face를 작업할 때는 왠만하면 사각형(4 vertices)으로 만들어요)
+edge, gg
+
+(subdivision = 두 엣지들의 중간들에서 부터 끊어내서 부드럽게 연결해줌 = 두 엣지 사이가 좁아 질 수록 각져짐)
+
+관절도 생각하면서 knifing
+
+g, s를 잘 섞어주며
+
+---
+
+<머리의 측면 등 볼륨 detailing 개선하기>
+
+머리의 mesh가 없으니, 머리의 solidify apply 하고, 수정 -> rmgn, 잠시 미러를 꺼주고, 생겨버린 면 중 미러에 겹치는 두 면을 삭제 후 다시 mirror 키기.
+
+머리 측면에서 면들에 ctrl + r로 중간 vertices 추가하고, 측면 및 탑뷰에서 vertices들 둥글화 하기 (s + y, shift +z 등 잘 활용)
+
+(혹시 각져유?, 언제나 merge가 문제일지도, mirror에서 merge 자체 수정도 가능)
+
+-----
+
+<몸통 detailing 수정>
+-팔
+solidify의 apply는 object mode에서만 가능함. 활성화해서, 몸통에 apply하기
+머리 하듯, 3D에서 각종 수정
+먼저 face모드에서, alt누르고 엣지 눌러서 닿는면 다 잡기, 후 scale로 원통형으로 팔 다듬기
+
+-몸
+배면 잡고 extrude
+mirror에 겹치는 면들 지우기 = 불필요한 각 삭제
+
+show overlays에서 wire frame on of 가능
+
+
+---------
+
+<머리 모통 join>
+ctrl + j = join (지정 대상에 modifier 귀속됨)
+
+<귀 만들가>
+add mesh - UV sphere - g, s, r 등을 이용하여 귀모양 잡고 귀에 위치
+
+<making nose>
+add cyclinder 3 vertices (삼각혐)
+엣지를 alt + ctrl 클릭 = 둘러싼 친구들 잡기, then bevel로 코 각 잡기
+
+face mode - L - Shift + h (선택품 제외 모두 hide)
+
+우클릭 subdivide = 반갈
+
+shift + 우클릭 = 커서 이동 / 원하는 타겟 잡고, shift + 우클릭 = 거기로 커서 이동, then set transfrom pivot point - 3D cursor, then scale down (커서 기준으로 scaling)
+
+그다음, mirroring 중이니, 3번으로 측면 이동만 실시
+
+<입 만들기>
+add mesh - UV sphere - g, s, r 등을 이용하여 모양 잡고, 
+선 적당한거 잡고 alt 클릭 후 v (rip out), then L
+
+mirror 에서 bisect 하면 겹친거 잘림, 그 다음 shade auto smooth
+
+-----
+-----
+
+<입 UV editing>
+select object, u,u = uv 펼치기, tab하면, bisect한 부분도 전개도에 반영
+
+uv sync selection on!
+
+<나머지 UV editing>
+subdivision 끄고
+u,u = uv 펼펴내기
+
+u 후, 혹은 egde 모드에서 우클릭 후,
+mark seam = 전개도 자르기
+전체선택 - u,u = 전개도 다시 적용
+
+--
+
+자르면 확인 = face mode 후 ctrl ++.
+
+L(link 연결된 , normal 방향 기준? seam  기준?)
+
+u,u 후 margin 넓혀주기
+
+---
+---
+
+<Texture paint>
+보라색 =무색
+text slot에서 색 추가(base color 지정)
+f로 브러쉬 사이즈 조절
+x로 색 변환
+창에서 빈칸 사이에 휠 키 드래그로 메뉴 이동 가능 (stroke에서 space -> line으로 선 그리기 가능)
+
+
+<UE 적용 준비 및 마무리>
+ctrl +j (오브젝토 병합)
+
+색칠 안된 흰색은, uv에서 uv를 흰색으로 가기
+
+(paint texture에서도 object mode로 이동 가능)
+
+paint texture에서 bc(UE material base color용으로 이미지 저장하기)
+
+오브젝트 선책 후, 선택 메쉬 익스포트
+
+-----
+
+<<믹사모에서, 라이언 캐릭터에 릭 심기>>
+
+upload character - mesh 올리고, 정면 맞추고 - skelecton = no fingers
+chin = 머리 시작 (돌아가는 부분 = 사실산 목 시작)
+groin = 허리
+
+---
+---
+---
+
+<<해체되는 상자 만들기>>
+
+<기본 세팅하기>
+
+cursor 구석에 두기(snap 키고) - mesh 우클릭 후, set origin to cursor(move pivot) - mirror on(X,Y)(=정사각형 확대) - dimension 수정하기 - alt + g(원점으로 이동) - ctrl + a (apply scale)
+= 메쉬 하나 작업하면 나머지 3개 동시에 됨(mirror).
+----
+preference 에서 Add-ons (plug-in들임) / get extensions(외부에서 가져오기) - allow online access 키기 - carver 검색 다운로드
+
+(ctrl + pad 1 = 뒷면 x)
+
+-----
+
+<carver 거칠게 모양 잡기>
+(= ctrl+shift+x / 모드 변경 space bar / line 모드시, 점 세개 찍고 spacebar 하면 삭제(carve))
+(Rebool / line 모드시, 점 세개 이상 찍고, shift 누르 상태에서, spacebar 하면 보존 slicing)
+
+---
+
+<materialing>
+(너무 흰색이면 빛 음영이 나중에 안 나옴 살짝 색타야 좋음)
+두개의 객체를 잡고 같은 색 처리 하려면 material 에서 copy to selected 하면 됨
+
+mark sharp = 엣지감을 살려냄.
+슬라이스 된 면은 두 점선면이 겹친 상태임.
+
+
+---
+---
