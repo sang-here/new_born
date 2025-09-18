@@ -1,0 +1,129 @@
+<<모델링 더 디테일하게 개선 복기>>
+
+(이제는 구현만 잘 해내면, 능력제로 가는 추세 같음)
+ 
+(모델링시 전체적으로 조질 거 먼저 조지기)
+ctrl + spacebar = full screen mode
+c하면 원 나옴 = circle + mouse wheel , 우클릭 (선택 취소 = selection eraser)
+
+bevel시, c (close) 한 번하면 다음에도 적용 저장되어 있음
+
+shift + d (duplicate), 우클릭 = 제자리에 복사
+
+<object, merge & seperations>
+
+(merge 하면 split 한 게 붙어버림. 그러므로 먼저 seperate by loose parts 후 merge 해야 오류가 없음)
+(실수로 seperate 된 거는 join해서 하나로, 빨강이들이 노랑이에게 귀속)
+Merge By ditance 시, distance를 늘리면 더 잘 붙음
+
+<>
+
+개별적 짜부. individual origins
+ctrl + i = inverse selection / 그 다음 선말고 면을 삭제
+
+---------------
+
+<<oak 통, which is actually editible afterwards>>
+
+cylinder 대신, plane으로 시작, 반갈하고, vertex bevel로 둥근 형태 잡되. vertices간 간격을 일정하게(bevel을 끝까지 안 땡김, 이번엔) - 기준선 만들고, in modifier - screw
+
+<screw>
+(wire frame on to overview)
+screw up = screw it ha ha
+steps to viewport = segments
+
+오브젝트 모드에서 screw 적용하여, 실체화 하기전 duplicate해서 백업본 만들고 convert to mesh하면 적용된 오브젝트 추가됨.
+
+---
+ctrl + '+' = 자동 선택
+select - loop = 자동 선택
+
+---
+<solidify>
+그림자 지는 것은 normal애 관한 것이거나, smooth 설정 문제
+
+---
+---
+
+<<new box for the conveyor 만들기>>
+
+이미지를 보고 각도를 맞추어 보고 사이즈 만들고, 작업 시작 습관
+대칭이니 1/4만 작업 by mirror
+
+knife (그림은 테두리부터 그린다와 같은 rule을 따른다/큰 거들부터 해본다)
+
+ ctrl + x = vertec 삭제
+
+alt + z = x-ray view
+
+<홈파기>
+선에 bevel 0.3 적용
+
+bevel은 큰 거부터 해야 나중에 오류가 적을 지도
+
+
+<inset>
+face mode, i = inset 
+
+
+(작업을 미래지향적으로 하려면, 완전히 같거나, 완전히 다르게 모델링 해주어야 함.)
+= bevel 이나 inset으로 가르고 선 만드는게, 더 엄밀성이 정확함
+(디테일한 썰기는 추후 carver를 사용할 예정.)
+(그외의 것은 텍스처로 처리할지 그냥 소거할지 고민)
+
+---------
+
+<새장 new way, retry>
+
+plane에서 선 따서 선으로 부터 만들어내기 p, e, s, l 활용
+
+solidify 에서 even thickness 체크하면 겹치는 부분도 같은 두께화 해줌
+
+새장 구멍을 k로 자르고 vertex를 bevel해서 둥글게 만들 수도 있음 (원이 안 되고, bevel에 의해 생긴 vertices들 간격이 약간 남으면 g (snap on)으로 각각의 가운데들로  붙일 수 있음)
+
+V(rip region)로 ctrl + r 후 썰기
+
+propotional edit - connected only on (연결된 놈들 같이)
+
+conver to mesh 하면 object화 되면서 modifier가 각인되어 버림 ㅅㄱ (join이랑은 다름.)
+
+-----
+<불규칙성 부여로 퀄리티 높이기>
+
+(원래는 이건 거의 마지막 작업이고, 이거 전에 UV를 먼저 펼쳐 나와야 함)
+propotional eidit 키고, g 누르고 휠로 오르락 내리락, connect 설정 끄고 vertex 잡아 가며 불규칙성 부여
+
+-----
+-----
+
+<<blue steel box for the conveyor 개선 및 보기 in a new way>>
+
+(모델링보다 지금은 최적화 시킬 수 있는 효과적 workflow 구상력을 기르는 것이 중요)
+(fluid는 고사양 gpu가 필요한데 어려워서, 다음에 나이아가라 할 때, 아마 화염 위주로 할지도 모르지만, 방법을 찾아보겄슈)
+
+1.snap 키고 cursor 옮기고 set origin.
+2. x, y mirror
+3. scaling and apply
+4. alt + g origin으로 이동
+
+<썰기>
+ctrl shift x = difference
+spacebar 썰기
+엣지가 짧아지면 작업이 어려움 = 썰기가 가능한 가운데로 지나가게
+shift + spacebar = 썰기
+점찍고 ctrl = snap on / 휠 돌리면 snap size up down
+
+
+<연필 그어 놓고 지우기>
+annotate 하고 그리고 다쓰면, tool에서, note 누르고 x하면 사라짐
+
+---------
+
+carver 엣지 넓이 살리기, ctrl snap 잘 쓰기
+knife로 테두리부터 튼 거 부터 잘 썰고,  i도 써봐유 
+
+
+---
+---
+---
+<<블렌더에서 수동 rigs 심기>>
