@@ -34,6 +34,14 @@ pose 모드에서 동기화된 움직임 확인 가능. (가령, r로 본 꼭지
 
 -------
 
+<뼈들 관계 종속 만들기>
+-edit mode로 들어가서 팔다리 뼈 잡고 마지막에 calvine 잡고 ctrl + p (make parent) - keep offset(뼈 자리들 유지하면서, 종속 연결)
+
+(대굴뼈는 이미 ectrude로 만들어서 몸통이랑 연결되어 있음)
+
+-------
+
+
 <weigt paint 가중치 수정하기>
 
 이번엔 bone 먼저 선택 후 모델링 선택 후 mode 변경(weight paint mode)
@@ -72,13 +80,6 @@ non-linear animation을 preview 창에서 on - a (전체 뼈 선택) - k(keyfram
 
 -push down action 하면 시퀀스를 동봉해서 테이프화
 바로 옆 생긴 디테일 창 혹은 n키로 디테일 창 열어서 이름 변경 후 테이프 잠시 치워 두시
-
-----
-
-<뼈들 관계 종속 만들기>
--edit mode로 들어가서 팔다리 뼈 잡고 마지막에 calvine 잡고 ctrl + p (make parent) - keep offset(뼈 자리들 유지하면서, 종속 연결)
-
-(대굴뼈는 이미 ectrude로 만들어서 몸통이랑 연결되어 있음)
 
 ----
 
@@ -199,12 +200,18 @@ texture slot - no color - + - base color
 더 밝게 볼려면 상단 창 shading 에서 studio- 그림 클릭 - 4번 쨰 원 클릭
 
 stroke 선에서 line으로 칠 선택 변경 가능
+디테일 창에서 palette 추가로 사용하는 색깔들 임시 저장 가능
 
 (와콤 펜 마우스 가장 싼 거면 기깔나게 그릴 수 있음 / CTL472)
 
 ---
 
 주말 간 개인 조금이라도 연습 권장
+
+Shift + Ctrl + Z = redo
+Edit > Undo History 메뉴로 가면, 지금까지 수행했던 작업 목록이 나옵니다.
+
+스켈렉탈 메쉬는 Physic asset 에서 물리적 표현을 제한 해주어야 함,
 
 
 
