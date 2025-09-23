@@ -128,7 +128,7 @@ modifier - boolen - object 스포이드 선택(짝궁 지정)
 (intersect = 공집합, uninon 합집합,)
 (짝꿍 object - 디테일 - viewport display - display as- wire = carver 처럼 보기)
 
-(자른 후 잘린 걸, convert to mesh 해야 잘린 게 적용 됨)
+(자른 후 잘린 걸, convert to mesh 해야 잘린 게 적용 됨!!)
 
 <문 위치 시키기>
 g + z + 125 then y at the appropriate point
@@ -199,7 +199,7 @@ tick으로 연결하면, 블루프린트의 self의 디테일에서 tick 간격 
 
 -------
 
-과제: carver 와 나이프, boolean 조각
+과제: carver 와 나이프, boolean 조각, array, 
 
 
 

@@ -1,0 +1,164 @@
+<<우물 만들기>>
+
+screw 이용 원통 ㄱ
+(object mode 에서 rotation apply 안 해주면 modifier - screw에서 오류가 있을 수 있음)
+
+급격히 꺽이면 solidify가 오류가 있을 수 있음 -> even thickness 체크
+
+--
+
+<나무 조각 엣지 분리로 연결하기>
+잘 안보이면, detail - viewport diaplay - in front
+
+snap 이용 (closest & edge)
+
+transform pivot point의 기본값은 늘 median point로 혹시 모르니
+
+하나 만들고 mirror로 *4(x,y)
+
+---
+
+<나무 굴곡주기>
+
+ctrl + r 
+
+먼저 꺽어주고 그다음 bevel로 마무리
+
+문제있음 m + b
+
+---
+
+<도르레 만들기>
+
+원통이면 screw 해삐까
+
+<screw 수정>
+screw - normal - smooth shading 체크 해제 <- 이거 하면 auto smooth shading 도 안 되는 듯?
+screw - normal - flip 체크 (normal 정상화)
+
+(우물 나머지 디테일은 과제)
+------
+
+<타일 구현>
+
+array 이용 및 겉 면만 축소
+z 값도 만져주면 계단식으로 구현 가능
+
+mirror에서 object를 기준으로도 반사할 수 있음
+mirror - bisect + flip 하면 넘어가는 거 자름
+
+---
+
+<디테일링, 불규칙성, 각종 특징>
+
+----
+
+실리더 이용 으로 바게스 만들고, 실린더 뚜껑 이용해서 손잡이 형성
+
+(콘텐츠 진흥원 가서 프로타입 보여주고 신청하면, 지원을 받을 수 있음)
+(광주의 캐릭터나 특산품을 겨냥 하면 선발에 더 어필링 될지도)
+(9월달에 특정 공고가 많이 나오는 듯)
+(수업때 만든 것을 수정해야, 포트폴리오 사용을 인정하겠음. 만원 어치 소송감!. 조금이라도 직접하세유)
+
+----
+
+snap  - active = 피봇따라
+	- face =면따라
+	- align rotaion to target = 알아서 돌아서 
+면을 따라서  다님.
+
+
+---
+---
+---
+
+<<sci-fi-door 개선>>
+
+<바닥>
+
+바닥 만들기 - 4개의 점을 duplicate 후 face를 추가 (그래야 안 겹치고 면이 새로 생김)
+
+바닥만 분리 후 4등분 - mirror
+
+(늘 큰 거부터 작은 거로 작업 흐름)
+
+(zoom in 이 잘 안 되면, push dot)
+
+바닥에 bevel을 이용한 다양한 디테일 추가
+
+너무 각져 있으면 렌더링 후 잘 안 보일 수 있음
+
+----
+
+<문>
+
+material에서 이미 저장한 material을 불러올 수 있음 
+
+ctrl + '+' = 확장 선택
+
+---
+
+<천장>
+
+vertices 4개 고르고 duplicate 후 fill
+
+--
+--
+--
+
+<<언리얼에서 오브젝트 집어서 옮기기 with line tracer>>
+
+(사업은 간단한 기술로 좋은 기획으로 시작하는 것 같은)
+(장점만 부각시키고, 계속 개선하고)
+
+(third person이 손상되거나 없으면, 콘텐츠팩 추가하면 됨)
+
+---
+
+<third person 인칭 변환, 임시 구현>
+
+camera boom - target arm length 400 -> 0로 시도하겠음(원시적이긴 하네)
+타임라인 auto로 부드러운 곡선 구현
+lerp로 camera view target length 조정 0 ~ 400
+FlipFlop 노드 = kinda limited 토글
+
+(ctrl + n = new level)
+
+-----
+
+<콜리전 확인 하고 고치기>
+
+메쉬로 들어가지 않아도, 월드에서 alt + 2 로도 콜리전 확인 가능
+
+collision complexity - use complex collision as simple
+(complex 콜리전을 그냥 콜리전 그자체로 사용)
+
+-----
+
+<grab 구현>
+
+1. Shoot the PhysicsHandle>
+
+camera에서 부터 forward vector할 line tracer를 활용함으로써 구현 시도.
+handle을 도입하고 hit 되는 component가 handle과 결함할 수 있게.
+(forward vector는 1cm임 *를 해주어야 함)
+
+2. Attach the PhysicsHandle with the hit Component>
+
+physic handle component 추가 = 고리 추가 / 
++ grab component at location 액션
+
+3. set it 100cm ahead from the camera / not pull up>
+tick에다 handle의 위치를 카메라의 100cm 앞으로 고정
+
+
+----
+
+<<언리얼 개선 완>>
+
+good job
+
+
+
+
+
