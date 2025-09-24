@@ -128,6 +128,7 @@ FlipFlop 노드 = kinda limited 토글
 
 <콜리전 확인 하고 고치기>
 
+(언리얼 에서 ctrl + e -> 메쉬의 메쉬 에셋 창으로 바로 이동)
 메쉬로 들어가지 않아도, 월드에서 alt + 2 로도 콜리전 확인 가능
 
 collision complexity - use complex collision as simple
