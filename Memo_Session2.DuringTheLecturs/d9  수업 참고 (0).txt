@@ -1,0 +1,90 @@
+<<베슬 형성>>
+
+(임포트시 콜리전 처리용과 비처리용을 따로 임포트 예정 = 작업 최적화)
+
+----
+
+<밧줄 구현>
+
+(커브 - bevel - round로 두께 부여 예정) 
+
+1 1/4 토막 sphere > 미러 후,  P
+2 밧줄 vertex를 e로 snap 키고 함체에 / 그리고 g로 이동
+3밧줄 subdivide로 구겨짐 표현
+
+(c 누르고 휠키는 선택 취소키)
+
+<쳐진 줄 만들기>
+
+ 점 3개 duplicate로 때고 (x,y mirror가 있으니) 각각 이으고, subdivide후 뾰족하게 z down으로 내리고  vertex bevel로 둥글게
+
+(전체 선택 해제 후, alt + h로 unhide 하면 목표 타겟만 제외하고 선택됨. 이때 다시 ctrl + i 하면, unhide 하면서 타겟도 잡음)
+
+타겟 p하기
+
+( sphere와 선으로 낙하산 만들기도 가능할듯)
+
+<밧줄 개선>
+
+curve를 고칠려면 다시 depth를 0으로 만들고, convert to mesh해야 선으로 mesh 화 됨
+
+겹친 vertices 다 잡고 alt + m - face & edges by vertices 후 다시 커브 후 bevel - round
+
+---
+---
+
+<바닥 개선, 아래층 통로>
+
+p 후 mirror 적용 후, inset으로
+
+<계단 구성>
+
+구멍 만들고, 경사 만들고 면에 ctrl + r 후 10개로 자르고 face 자르고. individual pivot으로 바꾸고 s + z + '0'으로
+
+(똑같은 건 거의 늘 mirror가 easy)
+
+---
+---
+
+<밑 층 바닥 만들기>
+
+modifier - boolean - intersect 이용
+
+---
+---
+---
+
+<<사람이 타는 로봇 만들기>>
+
+(image show - t로 간단 표시)
+
+1 vertices duplication과 extrude로 몸 팔 다리 부속 선 면 따기
+
+2 solidify 와 mirror 로 부피 부여 / P로 부속 구분
+
+
+----
+
+<<언리얼에 로봇 임포트 후 위젯 구현 하기>>
+
+(do once 노드, 단발 노드, 굳이 필욘 없는듯)
+
+1인칭에서 잡고
+3인칭에서 쏘는 코드 구현
+
+
+release component로 3인칭이 꺼지면 그랩을 버리게 만들기
+놓은 오브젝트가 이미 집었던 것만 자시 집으면 놓게 만들기
+
+--
+
+deform - displace = 면을 원하는 방향으로 밀어줌
+deform - displace - new - image 에서 원하는 색만 나오고 다른 색은 굴곡이 들어가게 할 수 있음. landscape 칠하면 굴곡 나오듯이 (가령 블록처럼) (흑백 사진 가져오면 재밌는 효과도 줄 듯)
+
+
+
+----
+
+
+
+

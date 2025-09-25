@@ -167,9 +167,18 @@ set scalar parameter in the material 노드
 
 -------
 
+EX)
+
 ctrl + alt - 엣지 = 엣지 잡기
 
 alt - 엣지 = 면 잡기
+
+--
+
+주기적인 행동	Timer를 사용 (SetTimer)
+복잡한 순차 로직	State Machine 또는 Behavior Tree 사용
+다수의 Delay	구조를 리팩토링해서 가능한 한 줄이기
+오브젝트 파괴와 딜레이 동시 사용	IsValid 체크 또는 LatentActionManager 직접 관리
 
 
 
