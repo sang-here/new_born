@@ -78,6 +78,7 @@ non-linear animation을 preview 창에서 on - a (전체 뼈 선택) - k(keyfram
 
 (플레이 옆 빨간 녹화 버튼 누르면 움직일 떄마다 key값 자동으로 설정.)
 
+editor type - nonlinear animation 에서!
 -push down action 하면 시퀀스를 동봉해서 테이프화
 바로 옆 생긴 디테일 창 혹은 n키로 디테일 창 열어서 이름 변경 후 테이프 잠시 치워 두시
 
