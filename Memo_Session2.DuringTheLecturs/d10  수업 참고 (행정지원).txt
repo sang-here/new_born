@@ -1,0 +1,121 @@
+<<HR & Our Craft, in terms of Business>>
+
+<포트폴리오>
+(면접시 회사의 기술적인 부분에 끌리지 않게 자기 포트폴리오를 제시하는게 좋음)
+수업 하며 정리한 자료 자체가 포트폴리오
+
+Unreal Fest 언리얼페스트 서울 - sponsors
+
+인더스트리얼과 아트 영역의 융합
+데이터와 아트의 디지털 트윈 양 갈래가 현 상황
+
+과거는 유니티와 언리얼은 각각 인더스트리와 아트를 맡았지만, 추세는 언리얼이 둘다 먹는 상황
+
+---
+<관련 기업>
+
+현대오토예보 - 현대 3d 에셋(과거 거대 에셋하며 유니티 사용/현재는 소규모 DT다시 시도 중)
+
+데이터와 아트 양립 목표하는 기업
+Samwoo Imersion
+Monstera
+
+---
+
+<업계 현황>
+
+ai 코딩이 압도해가는 추세 -> vielleicht, ai의 코딩을 검증하는 인간을 hire하는 추세로?(확장성, 재사용성, 구조화 등 검증 및 유도)
+개발자 대량 실직으로 경력직 resources가 많은 상황이 되어 버림 <- can you compete with 'em? hmm -> well you may go the other way(3D 데이터 테크니컬 아티스트)
+
+--
+
+<실무자에게 제시할 비전>
+
+입사 이후 단,중,장기 계획 및 목표 (계획이 수정되어져야만 하더라도, 생각하는 사람을 원하는 건 당연하긴 해)
+역량 발전 방향(ai 한테 도움 가능)
+
+<취업 매칭>
+
+목표 기업들을 주면, 대한상공회의소가 대리 지원하는 시스템임
+
+-----
+
+<이력서 팁>
+
+
+용지 분할해서 이미지 주요 부분만 캡쳐해서 넣는 것도 방법 (동영상 링크 첨부만으로 연결이 어려울 것으로 예상될 떄)
+
+기술 사용 경위 및 이유를 구체적으로 명시하는 것이 기술을 잘 모르는 이에게도 설득력이 있음
+
+자유로운 업계 분위기 = 딱딱한 이력서 지양
+
+
+문서도 보는 사람에 대한 배려를 보는 절대 기준으로 보는, 집착광들이 있을 수 있음 / 물론 적당히 배려는 있긴 해야할 듯
+
+칸을 만들거 항목을 바꿔서 personalised한 promoting 해야할 듯
+
+뜬금 없는 기타사항/취미으로 바꿔도 됨. 전체적으로 딱딱하다가 약간 넣어주면 킥임.
+
+
+어쩌피 이력에서 자기소개는 다 읽어보지 않음. 태도 표정 눈빛 / 그리고 타이틀
+진실 담백이 킥임. 
+
+가독 좋게 단문으로 가자. 글게 bold처리로 강조할 사항 강조 가능
+
+---
+----
+---
+
+<<비지능형 공장, but 자동화 공장>>
+
+현대가 싱가폴에 공장만들면서, 디지털 트윈 dt(네트워크와 연결해서 실시간 업댓하며) 만들었음 (공장장/팀장들이 이걸 보며 comission 받은 계층별로 overview 하고 조절함)
+
+--
+
+관제 시스템 구성
+
+프론트 엔드
+백 엔드
+
+--
+
+<<smart factory>>
+
+자동화를 AI가 관제하고 사전 사후로 최적화함. with 수많은 미시 sensors
+
+---
+
+<<what does DT stnad for, then?>>
+
+1. DT는 smart factory를 미리 구현해서 simulate해보고, 오류를 잡고, 실제 공장을 짓는 거임
+
+(최근 이런 공장의 데이터들과 아트적 구현을 같이 다루는 인간들이 부족해와쑤다)
+
+2. 고가 장비 시뮬레이션 DT or  VR XR <- 요즘 StartUps 증가
+
+-----
+------
+
+
+Where You Might Use This Phrase
+This phrase is excellent for:
+
+Portfolios/Resumes: As a high-level title or specialization statement.
+
+Job Interviews: To quickly define your skill set.
+
+Networking: To describe what you do to other professionals.
+
+It shows you're not just a modeler, but someone who understands the entire pipeline from asset creation in Blender to final, interactive, real-time presentation in Unreal Engine, with an eye toward both the how (
+
+technical
+) and the why (
+
+expressive
+) of the art.
+
+In short: Keep it! It's a strong, modern descriptor.
+
+
+
+
