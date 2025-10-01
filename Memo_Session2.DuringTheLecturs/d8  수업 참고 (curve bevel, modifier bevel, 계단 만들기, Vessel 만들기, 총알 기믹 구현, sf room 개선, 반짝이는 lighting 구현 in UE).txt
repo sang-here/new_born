@@ -44,7 +44,7 @@
 19 특별한 엣지한 두께들의 빨간 face들을 alt + n - recalculate outside (오류난 부분은 l로 선택 후, m + b 후, 다시 alt + n - recalculate outside)
 
 alt + j = 두 삼각형 to 사각형
-modifier - becel 추가 = 각진 것들에 bevel
+modifier - bevel 추가 = 각진 것들에 bevel
 
 
 

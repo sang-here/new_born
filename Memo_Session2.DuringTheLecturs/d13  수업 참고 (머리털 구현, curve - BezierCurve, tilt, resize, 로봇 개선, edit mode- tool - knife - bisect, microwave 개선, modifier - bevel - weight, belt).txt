@@ -1,0 +1,94 @@
+<<캐릭터 머리털 심기>>
+
+<머리털 모양 gimmick 만들기>
+
+A; shift + a - curve - BezierCurve
+B: shift + a - curve - circle
+
+curve - data - geometry - bevel(!!) - B to A (object) 
+
+A: alt + s = scale up & down (resize)
+B: 원 구기기
+
+--------
+
+<표면 다듬기 및 필요없는 선들 제거>
+B - data - resolution (각 vertex간 간격 수) down
+A - OB mode - ctrl + 1 (modifier 스무스 추가)
+A - data - resolution (각 vertex간 간격 수) down
+
+<각 털들 적당히 Tilt>
+ctrl + T = tilt (돌리기) 
+
+-------
+
+<머리털 가닥들로 복제 후 저장>
+s (size) != alt +s(resize)
+
+-----
+
+<머리에 머리털 올리기>
+snap - face mode - active(on = pivot point를 중심으로 적용하겠다) & align rotation (on) 후, 머리에 이동
+
+<tilt 수정>
+조정하고 자리 다 잡으면, ctrl + a  - rotation 후, ctrl + T = tilt (돌리기) - 90 - enter로 각털들 모두 한번에 원위치
+
+-------------
+
+<머리털 각각 자리 잡기>
+
+dulplicate 잘 하고 back up들고 잘 만들기
+
+----
+----
+----
+
+
+<<로봇 개선하기>>
+
+각종 개선
+
+(복잡한 걸 어느정도는 단순화할 필요가 대게 있긴 함)
+(bevel에서 profile shape을 바꾸면 안으로 들어가면서 bevel 먹힘)
+
+(edit 모드에서 tool - knife - bisect = 면 자르기 신기술 / bisect - detail 에서 fill 채우면 면도 채워짐)
+
+(텍스쳐로도 디테일을 추가하니, 너무 과부하가 걸리게, 모두 모델링으로 만들지 아니 하여도 좋음)
+(마감일, 시간 관계상, 골고루하고, 중요한 부분만 하고, 버릴 건 버려야 함. 쩔수 임)
+
+
+--------
+-------
+------
+
+<<microwave 수정하기>>
+
+<bevel 추가 수정>
+modifier - bevel - weigt 수정 (target edge에 bevel crease 수정)
+
+--
+--
+
+<<큐브로 conveyor belt 만들기>>
+
+만들고 uv-editing에서 u,u
+
+(작업창에서 n누르고, uv-vertex에서 조정하면 전개도를 비율별로도 볼 수 있음.)
+(여러 부속에서 수치를 기록하고 적용하는게 나을듯)
+
+---
+
+<검색대와 스캐너 만들기>
+
+(edge 선택 - x - only edge & face = 면만 포뜨기 삭제)
+
+
+(면끼리 잘라내고 slip후(p말고 face by edges), modifier에서 bevel 넣으면 홈 들어감)
+(edge 클릭 후, ctrl누르고 다음 혹은 다다다음 타겟 edge 눌르면 연속 잡기)
+
+----
+
+
+
+
+
